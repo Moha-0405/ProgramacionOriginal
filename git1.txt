@@ -1,1 +1,3 @@
 este es un archivo para usar de prueba para git
+
+versión 2
