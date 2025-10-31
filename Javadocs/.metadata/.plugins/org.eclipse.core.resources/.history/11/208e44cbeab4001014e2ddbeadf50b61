@@ -1,0 +1,33 @@
+package laaouar;
+
+import java.util.Scanner;
+
+public class Ejercicio2 
+{
+	public static void main(String[] args) 
+	{
+		Scanner teclado= new Scanner(System.in);
+		int numeroInicial=0;
+		double fitness=10.00, yoga=15.00, musculacion=20.00;
+		System.out.println("EJERCICIO 1: GESTIÓN DE UN GIMNASIO");
+		System.out.println("----------------------------------");
+		System.out.println("TIPOS DE MATRICULAS: 1. FITNESS - 2. YOGA - 3. MUSCULACIÓN"+
+				 "\nPrecio de la matrícula tipo 1 (FITNESS): 10.0€"+
+				 "\nPrecio de la matrícula tipo 2 (YOGA): 15.0€"+
+				 "\nPrecio de la matrícula tipo 3 (MUSCULACIÓN): 20.0€");
+		System.out.println("");
+		System.out.println("----------------------------------");
+		do
+		{
+			System.out.println("1. Calcular PVP de cada matricula.\r\n"
+					+ "2. Aplicar oferta a un tipo de matricula (sin iva).\r\n"
+					+ "3. Calcular el importe total de matriculas realizadas (sin iva).\r\n"
+					+ "4. Salir");
+			System.out.print(" Seleccione una opción:");
+			numeroInicial=teclado.nextInt();
+		}while(numeroInicial<=0);
+		
+		double[] iva= new double[3];
+		
+	}
+}

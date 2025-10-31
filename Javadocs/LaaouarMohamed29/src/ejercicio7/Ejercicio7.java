@@ -1,0 +1,65 @@
+package ejercicio7;
+
+import java.util.Scanner;
+
+public class Ejercicio7 {
+
+	public static void main(String[] args) 
+	{
+		Scanner teclado= new Scanner(System.in);
+		int contador=1;
+		int posicion=0;
+		int contadorNegativo=0,contadorPositivo=0;
+		int[] numero= new int[100];
+		
+		do
+		{
+			System.out.println("Dame un numero no nulo:");
+			numero[posicion]=teclado.nextInt();
+			while(numero[posicion]==0)
+			{
+				System.out.println("El 0 es nulo dame otro:");
+				numero[posicion]=teclado.nextInt();
+			}
+			if(numero[posicion]<0)
+			{
+				contadorNegativo++;
+				
+			}
+			if(numero[posicion]>0)
+			{
+				contadorPositivo++;
+			}
+			contador++;
+		} while(contador<=100);
+	
+		
+			if(contadorPositivo<1)
+			{
+				System.out.println("Ha leido "+contadorPositivo+" numeros positivos");
+			}
+			else if(contadorPositivo==1)
+			{
+				System.out.println("Ha leido "+contadorPositivo+" numero positivo");
+			}
+			else
+			{
+				System.out.println("Ha leido "+contadorPositivo+" numeros positivos");
+			}
+			
+			
+			if(contadorNegativo<1)
+			{
+				System.out.println("Ha leido "+contadorNegativo+" numeros negativos");
+			}
+			else if(contadorNegativo==1)
+			{
+				System.out.println("Ha leido "+contadorNegativo+" numero negativo");
+			}
+			else
+			{
+				System.out.println("Ha leido "+contadorNegativo+" numeros negativos");
+			}
+	}
+
+}

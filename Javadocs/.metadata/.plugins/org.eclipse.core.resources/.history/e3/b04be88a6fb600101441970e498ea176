@@ -1,0 +1,27 @@
+package ejercicio1;
+
+import java.util.Scanner;
+
+public class Ejercicio1 {
+
+	public static void main(String[] args) 
+	{
+		Scanner teclado= new Scanner(System.in);
+		
+		int posicion=10;
+		int[] numero=new int[posicion];
+		
+		for(int contador=0;contador<10;contador++)
+		{
+			System.out.println("Dame un numero");
+			numero[posicion]=teclado.nextInt();
+			
+			contador++;
+			System.out.println("El valor"+ numero[posicion]);
+			
+		}
+		
+		
+	}
+
+}

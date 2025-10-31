@@ -1,0 +1,55 @@
+package pruebas2;  // Declaramos el paquete donde está la clase
+
+import java.util.Scanner;  // Importamos Scanner para leer lo que escribe el usuario
+
+public class Pruebas2 
+{
+	public static void main(String[] args) 
+	{
+		// Creamos un objeto Scanner para leer las respuestas del usuario
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Piensa en un número del 1 al 100 y no me lo digas.");
+		System.out.println("Voy a intentar adivinarlo...");
+		System.out.println("Cuando te diga un número, responde con:");
+		System.out.println("  - 'mayor' si tu número es más grande");
+		System.out.println("  - 'menor' si tu número es más pequeño");
+		System.out.println("  - 'igual' si he acertado\n");
+
+		int min = 1;      // Límite inferior del rango posible
+		int max = 100;    // Límite superior del rango posible
+		String respuesta; // Para guardar la respuesta del usuario
+		int intento;      // Número que el ordenador propone
+
+		// Bucle que se repite hasta que el ordenador adivine el número
+		do {
+			// El ordenador elige el número del medio del rango
+			intento = (min + max) / 2;
+			System.out.println("¿Es " + intento + "? (mayor/menor/igual)");
+			
+			// Leemos lo que responde el usuario
+			respuesta = sc.next().toLowerCase(); // Pasamos a minúsculas por si el usuario escribe "Mayor", etc.
+
+			// Si el número pensado es mayor al intento
+			if (respuesta.equals("mayor")) {
+				min = intento + 1; // Subimos el límite inferior
+			}
+			// Si el número pensado es menor al intento
+			else if (respuesta.equals("menor")) {
+				max = intento - 1; // Bajamos el límite superior
+			}
+			// Si el número es igual, hemos acertado
+			else if (respuesta.equals("igual")) {
+				System.out.println("\n¡Genial! He adivinado tu número: " + intento);
+			}
+			// Si escribe algo distinto, le avisamos
+			else {
+				System.out.println("Por favor, escribe 'mayor', 'menor' o 'igual'.");
+			}
+
+		} while (!respuesta.equals("igual")); // Repite mientras no haya acertado
+
+		// Cerramos el Scanner
+		sc.close();
+	}
+}

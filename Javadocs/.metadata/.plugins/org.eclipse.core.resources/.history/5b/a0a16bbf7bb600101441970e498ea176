@@ -1,0 +1,31 @@
+package cadenaCaracteres;
+
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class CadenaCaracter {
+
+	public static void main(String[] args) 
+	{
+		Scanner teclado = new Scanner(System.in);
+		
+		Pattern patron=Pattern.compile("[0-9]{8}[A-Z]");
+		
+		String posibleDni;
+		System.out.println("Dame tu Dni: ");
+		posibleDni=teclado.nextLine();
+		
+		Matcher texto= patron.matcher(posibleDni);
+		
+		if(texto.matches())
+		{
+			System.out.println("El DNI es correcto ");
+		}
+		else
+		{
+			System.out.println("El DNI NO es correcto ");
+		}
+	}
+
+}

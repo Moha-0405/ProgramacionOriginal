@@ -1,0 +1,34 @@
+package pruebas;
+
+import java.util.Scanner;
+
+public class Prueba 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Introduce una cantidad en euros (múltiplo de 5): ");
+		int cantidad = sc.nextInt();
+
+		if (cantidad % 5 != 0) {
+			System.out.println("La cantidad debe ser múltiplo de 5.");
+			sc.close();
+			return;
+		}
+
+		int[] billetes = {500, 200, 100, 50, 20, 10, 5};
+
+		System.out.println("\nDesglose de billetes necesarios:");
+
+		for (int billete : billetes) {
+			int numBilletes = cantidad / billete;
+			if (numBilletes > 0) {
+				System.out.println(numBilletes + " billete(s) de " + billete + " €");
+				cantidad = cantidad % billete;
+			}
+		}
+
+		sc.close();
+	}
+}

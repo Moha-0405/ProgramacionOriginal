@@ -1,0 +1,49 @@
+package ejercicio8;
+
+import java.util.Scanner;
+
+public class Ejercicio8 {
+
+	public static void main(String[] args) 
+	{
+		Scanner teclado= new Scanner(System.in);
+		int numero;
+		int contadorNegativo=0,contadorPositivo=0;
+		
+		do
+		{
+			System.out.println("Dame numeros nulos (poner 0 para salir)");
+			 numero=teclado.nextInt();
+		} while(numero==0);
+		
+		if(contadorPositivo<1)
+		{
+			System.out.println("Ha leido "+contadorPositivo+" numeros positivos");
+		}
+		else if(contadorPositivo==1)
+		{
+			System.out.println("Ha leido "+contadorPositivo+" numero positivo");
+		}
+		else
+		{
+			System.out.println("Ha leido "+contadorPositivo+" numeros positivos");
+		}
+		
+		
+		if(contadorNegativo<1)
+		{
+			System.out.println("Ha leido "+contadorNegativo+" numeros negativos");
+		}
+		else if(contadorNegativo==1)
+		{
+			System.out.println("Ha leido "+contadorNegativo+" numero negativo");
+		}
+		else
+		{
+			System.out.println("Ha leido "+contadorNegativo+" numeros negativos");
+		}
+	}
+	
+	
+
+}

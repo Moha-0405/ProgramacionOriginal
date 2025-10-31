@@ -1,0 +1,26 @@
+package laaouar;
+
+import java.util.Scanner;
+
+public class Ejercicio1 
+{
+	
+	public static void main(String[] args) 
+	{
+		Scanner teclado= new Scanner(System.in);
+		double valor, masa, tiempo,frecuencia, radioCirculo;
+		
+		System.out.print(" Introduce el valor de X:");
+		valor=teclado.nextDouble();
+		System.out.print("Introduce la masa (kg): ");
+		masa=teclado.nextDouble();
+		System.out.print(" Seleccione una opción:");
+		tiempo=teclado.nextDouble();
+		System.out.print(" Seleccione una opción:");
+		frecuencia=teclado.nextDouble();
+		System.out.print(" Seleccione una opción:");
+		radioCirculo=teclado.nextDouble();
+
+	}
+
+}

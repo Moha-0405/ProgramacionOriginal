@@ -1,0 +1,25 @@
+package ejercicio2;
+
+import java.util.Scanner;
+
+public class Ejercicio2 
+{
+	public static void main(String[] args) 
+	{
+		Scanner teclado= new Scanner(System.in);
+		
+		final int POSICION=10;
+		int[] numero=new int[POSICION];
+		int suma=0;
+		
+		for(int contador=0;contador<10;contador++)
+		{
+			System.out.println("Dame un numero");
+			numero[contador]=teclado.nextInt();
+			suma=suma+numero[contador];
+			System.out.println("El valor: "+ numero[contador]+" ha sido guardado");
+			
+		}
+	}
+	
+}
