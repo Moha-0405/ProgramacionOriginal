@@ -1,0 +1,30 @@
+package ejercicio6;
+
+import java.util.Scanner;
+
+public class Ejercicio6 
+{
+	public static void main(String[] args) 
+	{
+		Scanner teclado= new Scanner(System.in);
+		
+		System.out.println("Dame el primer numero");
+		int posicion=teclado.nextInt();
+		
+		System.out.println("Dame el segundo numero");
+		int numeroGuardado=teclado.nextInt();
+		
+		int[] numero=new int[posicion];
+		int contador=0;
+		
+		while(contador<posicion)
+		{
+			numero[contador]=numeroGuardado;
+			System.out.println("Se guardo el numero "+ numeroGuardado+ " en la posicion "+ contador);
+			contador++;
+			
+			
+		}
+		
+	}
+}

@@ -10,16 +10,24 @@ public class Ejercicio4 {
 		
 		final int POSICION=20;
 		double[] numero=new double[POSICION];
-		contadorPositivo
+		double sumaPositiva=0,sumaNegativa=0;
 		
 		for(int contador=0;contador<20;contador++)
 		{
 			System.out.println("Dame un numero");
 			numero[contador]=teclado.nextInt();
-			
+			if(numero[contador]>=0)
+			{
+				sumaPositiva=sumaPositiva+numero[contador];
+			}
+			else
+			{
+				sumaNegativa=sumaNegativa+numero[contador];
+			}
 			
 		}
-		System.out.println("El valor total de la suma: "+ suma);
+		System.out.println("El valor total de la suma de numeros positivos es: "+ sumaPositiva);
+		System.out.println("El valor total de la suma de numeros negativos es: "+ sumaNegativa);
 	}
 
 }

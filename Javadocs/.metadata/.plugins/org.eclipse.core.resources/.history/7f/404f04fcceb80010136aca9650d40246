@@ -1,0 +1,30 @@
+package ejercicio7;
+
+import java.util.Scanner;
+
+public class Ejercicio7 {
+
+	public static void main(String[] args) 
+	{
+		Scanner teclado= new Scanner(System.in);
+		
+		System.out.println("Dame el primer numero");
+		int numA=teclado.nextInt();
+		
+		System.out.println("Dame el segundo numero");
+		int numZ=teclado.nextInt();
+		
+		int posicion=numZ;
+		int[] numero=new int[posicion];
+		int contador=0;
+		
+		while(numA<=numZ)
+		{
+			numero[numA]=numA;
+			System.out.println("El numero guardado en la posicion "+(numero[contador]++)+" es "+ (numA++));
+			
+		}
+		
+	}
+
+}

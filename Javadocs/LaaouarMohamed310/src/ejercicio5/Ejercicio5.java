@@ -1,0 +1,28 @@
+package ejercicio5;
+
+import java.util.Scanner;
+
+public class Ejercicio5 {
+
+	public static void main(String[] args) 
+	{
+		Scanner teclado= new Scanner(System.in);
+		
+		final int POSICION=20;
+		double[] numero=new double[POSICION];
+		double suma=0, media=0;
+		
+		for(int contador=0;contador<20;contador++)
+		{
+			System.out.println("Dame un numero");
+			numero[contador]=teclado.nextInt();
+			
+			suma=suma+numero[contador];
+			
+		}
+		media=suma/POSICION;
+		System.out.println("La media es: "+ media);
+		
+	}
+
+}
