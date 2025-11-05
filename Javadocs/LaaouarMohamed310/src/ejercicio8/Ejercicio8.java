@@ -10,7 +10,7 @@ public class Ejercicio8 {
 		
 		double[]numero=new double[100];
 		
-		System.out.println("Dame un numero");
+		System.out.println("Dame un numero entre el 0 y 1");
 		double numUsuario=teclado.nextDouble();
 		int almacenadorSuperior=0;
 		int almacenadorIgualado=0;
