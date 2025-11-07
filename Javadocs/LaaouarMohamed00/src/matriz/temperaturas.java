@@ -7,6 +7,7 @@ public class temperaturas
 		int[][] temperatura;  //Declaracion
 		temperatura= new int[30][12];   // Instanciación
 		int temperaturaMax,temperaturaMin,aplitudTermica;
+		
 		for(int dia=0;dia<30;dia++)
 		{
 			for(int mes=0; mes<12; mes++)

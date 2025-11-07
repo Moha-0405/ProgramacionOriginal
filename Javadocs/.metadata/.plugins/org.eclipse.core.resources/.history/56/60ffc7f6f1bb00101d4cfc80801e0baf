@@ -1,0 +1,30 @@
+package ejercicio9;
+
+import java.util.Scanner;
+
+public class Ejercicio9 {
+
+	public static void main(String[] args) 
+	{
+		Scanner teclado= new Scanner(System.in);
+		
+		double[] num= new double[100];
+		
+		for(int posicion=0; posicion<100;posicion++)
+		{
+			num[posicion]=(1+Math.random()*10);
+		}
+		
+		System.out.println("Dame un numero entre el 1 y 10");
+		double numTeclado=teclado.nextDouble();
+		
+		for(int posicion=0; posicion<100;posicion++)
+		{
+			if(numTeclado==num[posicion])
+			{
+				System.out.println("Las posiciones que se encuentra tu numero son: "+ (posicion+1));
+			}
+		}
+	}
+
+}

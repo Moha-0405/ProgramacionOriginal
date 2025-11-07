@@ -1,0 +1,92 @@
+package metodos;
+
+import java.util.Scanner;
+
+public class Metodos1 {
+
+	public static void main(String[] args) 
+	{
+		Scanner teclado= new Scanner(System.in);
+		int numero;
+		boolean par;
+		long resultado;
+		
+		numero=10;
+		par= esPar(numero);
+		
+		resultado=elFactorial(numero);
+		System.out.println(resultado);
+		
+		double operadores;
+		System.out.println("Dame el primer numero");
+		double num1=teclado.nextDouble();
+		System.out.println("Dame el segundo numero");
+		double num2=teclado.nextDouble();
+		teclado.nextLine();
+		System.out.println("Dame el operador que son (+,-,*,/,%)");
+		String operacion=teclado.nextLine();
+		operadores=losOperadores(num1,num2,operacion);
+		System.out.println(operadores);
+		
+	}
+	//EsPar calcular si un valor es par. Devuelve un tipo booleano
+	public static boolean esPar(int numero)
+	{
+		boolean par;
+		if(numero%2==0)
+		{
+			par=true;
+		}
+		else
+		{
+			par= false;
+		}
+		return par;
+	}
+	
+	//EsImPar calcular si un valor es impar. Devuelve un tipo booleano
+	public static boolean esImPar(int numero)
+	{
+		
+		return !esPar(numero);
+	}
+	
+	//elFactorial calcula el factorial del numero.
+	public static long elFactorial(int numero)
+	{
+		 long resultado = 1;
+	        for (int i = 1; i <= numero; i++) 
+	        {
+	            resultado *= i;
+	        }
+	        
+	    return resultado;
+	}
+	
+	public static double losOperadores(double num1, double num2, String operador)
+	{
+		double resultado=0;
+		if(operador=="+")
+		{
+			resultado=num1 + num2;
+		}
+		else if(operador=="-")
+		{
+			resultado=num1-num2;
+		}
+		else if(operador=="*")
+		{
+			resultado=num1*num2;
+		}
+		else if(operador=="/")
+		{
+			resultado=num1/num2;
+		}
+		else if(operador=="%")
+		{
+			resultado=num1%num2;
+		}
+		return resultado;
+	}
+	
+}
