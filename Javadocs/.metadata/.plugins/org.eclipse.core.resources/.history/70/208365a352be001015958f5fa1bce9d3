@@ -1,0 +1,47 @@
+package ejercicio10;
+
+import java.util.Scanner;
+
+public class Ejercicio10 {
+
+	public static void main(String[] args) 
+	{
+		Scanner teclado= new Scanner(System.in);
+		
+		System.out.println("Dame cuantas alturas guardaremos.");
+		int n=teclado.nextInt();
+		double[] altura=new double[n];
+		
+		double alturaTeclado;
+		int posicion=0;
+		double media=0;
+		double max=altura[posicion];
+		double min=altura[posicion];
+		
+		for(posicion=0;posicion<n;posicion++)
+		{
+			System.out.println("Dame la altura");
+			alturaTeclado=teclado.nextDouble();
+			altura[posicion]=alturaTeclado;
+			
+		}
+		
+		for(posicion=0;posicion<n;posicion++)
+		{
+			media=media+altura[posicion];
+			if(altura[posicion]>max)
+			{
+				max=altura[posicion];
+			}
+			else if(altura[posicion]<min)
+			{
+				min=altura[posicion];
+			}
+		}
+		System.out.println("La altura media es "+ (media/n));
+		System.out.println("La altura max es "+max);
+		System.out.println("La altura min es "+ min);
+		
+	}
+
+}

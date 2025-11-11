@@ -36,7 +36,7 @@ public class temperaturas
 					temperaturaMin=temperatura[dia][mes];
 					
 				}
-				System.out.println();
+				
 			}
 			aplitudTermica=temperaturaMax-temperaturaMin;
 			System.out.println("La maxima temperatura del mes "+(mes+1)+": "+ temperaturaMax);

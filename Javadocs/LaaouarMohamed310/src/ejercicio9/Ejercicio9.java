@@ -19,14 +19,22 @@ public class Ejercicio9 {
 		System.out.println("Dame un numero entre el 1 y 10");
 		int numTeclado=teclado.nextInt();
 		
-		for(int posicion=0; posicion<100;posicion++)
+		if(numTeclado<=10&&numTeclado>0)
 		{
-			
-			if(numTeclado==num[posicion])
+		
+			for(int posicion=0; posicion<100;posicion++)
 			{
-				System.out.println("Las posiciones que se encuentra tu numero son: "+ (posicion+1));
+				
+				if(numTeclado==num[posicion])
+				{
+					System.out.println("Las posiciones que se encuentra tu numero es la: "+ (posicion+1));
+				}
+				
 			}
-			
+		}
+		else
+		{
+			System.out.println("El numero no cumple la regla ");
 		}
 	}
 

@@ -1,0 +1,102 @@
+package ejercicio11;
+
+import java.util.Scanner;
+
+public class Ejercicio11 {
+
+    public static void main(String[] args) {
+
+        // EJERCICIO 2: Gestión de un Gimnasio
+
+        // Tipos de matriculas:
+        int FITNESS = 1;
+        int YOGA = 2;
+        int MUSCULACION = 3;
+
+        // Precios de matrícula:
+        double fitnessPrecio = 10.0;
+        double yogaPrecio = 15.0;
+        double musculacionPrecio = 20.0;
+
+        // Menú de Operaciones
+        int opcion;
+
+        do {
+            // Mostrar menú
+            System.out.println("\n--- Menú de Operaciones ---");
+            System.out.println("1. Calcular PVP de cada matricula.");
+            System.out.println("2. Aplicar oferta a un tipo de matricula (sin iva).");
+            System.out.println("3. Calcular el importe total de matriculas realizadas (sin iva).");
+            System.out.println("4. Salir");
+            System.out.print("Seleccione una opción: ");
+
+            // Leer la opción del usuario
+            Scanner scanner = new Scanner(System.in);
+            opcion = scanner.nextInt();
+
+            // Procesar la opción
+            switch (opcion) {
+                case 1:
+                    // Calcular PVP de cada matrícula
+                    System.out.println("\n--- Calcular PVP de cada matricula ---");
+                    System.out.print("Ingrese el IVA para el tipo de matrícula 1 (4 - 10 - 21): ");
+                    int ivaFitness = scanner.nextInt();
+                    System.out.println("El PVP de la actividad de Fitness es: " + (fitnessPrecio + (double)ivaFitness / 100) + "€");
+                    System.out.print("Ingrese el IVA para el tipo de matrícula 2 (4 - 10 - 21): ");
+                    int ivaYoga = scanner.nextInt();
+                    System.out.println("El PVP de la actividad de Yoga es: " + (yogaPrecio + (double)ivaYoga / 100) + "€");
+                    System.out.print("Ingrese el IVA para el tipo de matrícula 3 (4 - 10 - 21): ");
+                    int ivaMusculacion = scanner.nextInt();
+                    System.out.println("El PVP de la actividad de Musculación es: " + (musculacionPrecio + (double)ivaMusculacion / 100) + "€");
+                    break;
+
+                case 2:
+                    // Aplicar oferta a un tipo de matricula
+                    System.out.print("Seleccione tipo de matrícula (1. Fitness, 2. Yoga o 3. Musculación): ");
+                    int tipoMatricula = scanner.nextInt();
+
+                    if (tipoMatricula == FITNESS) {
+                        double descuentoFitness = 15.0;
+                        double precioFinalFitness = fitnessPrecio - (fitnessPrecio * descuentoFitness / 100);
+                        System.out.println("El precio final de la matrícula de Fitness con un descuento del " + descuentoFitness + "% es: " + precioFinalFitness + "€");
+                    } else if (tipoMatricula == YOGA) {
+                        double descuentoYoga = 15.0;
+                        double precioFinalYoga = yogaPrecio - (yogaPrecio * descuentoYoga / 100);
+                        System.out.println("El precio final de la matrícula de Yoga con un descuento del " + descuentoYoga + "% es: " + precioFinalYoga + "€");
+                    } else if (tipoMatricula == MUSCULACION) {
+                        double descuentoMusculacion = 15.0;
+                        double precioFinalMusculacion = musculacionPrecio - (musculacionPrecio * descuentoMusculacion / 100);
+                        System.out.println("El precio final de la matrícula de Musculación con un descuento del " + descuentoMusculacion + "% es: " + precioFinalMusculacion + "€");
+                    } else {
+                        System.out.println("Opción de tipo de matrícula inválida.");
+                    }
+                    break;
+
+                case 3:
+                    // Calcular el importe total de matrículas realizadas
+                    System.out.print("Ingrese la cantidad de matrículas de Fitness: ");
+                    int cantidadFitness = scanner.nextInt();
+                    System.out.print("Ingrese la cantidad de matrículas de Yoga: ");
+                    int cantidadYoga = scanner.nextInt();
+                    System.out.print("Ingrese la cantidad de matrículas de Musculación: ");
+                    int cantidadMusculacion = scanner.nextInt();
+
+                    double totalFitness = fitnessPrecio * cantidadFitness;
+                    double totalYoga = yogaPrecio * cantidadYoga;
+                    double totalMusculacion = musculacionPrecio * cantidadMusculacion;
+
+                    double totalMatriculas = totalFitness + totalYoga + totalMusculacion;
+                    System.out.println("El importe total (sin iva) de las matrículas realizadas es: " + totalMatriculas + "€");
+                    break;
+
+                case 4:
+                    System.out.println("Saliendo del programa...");
+                    break;
+
+                default:
+                    System.out.println("Opción no válida. Intente de nuevo.");
+            }
+        } while(opcion==4);
+    }
+}
+

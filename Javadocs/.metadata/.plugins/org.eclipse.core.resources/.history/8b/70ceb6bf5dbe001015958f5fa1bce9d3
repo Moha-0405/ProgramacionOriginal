@@ -1,0 +1,26 @@
+package ejercicio11;
+
+import java.util.Arrays;
+
+public class Ejercicio11 {
+
+	 public static void main(String[] args) {
+	        // Declarar un array para almacenar 10 números enteros.
+	        int[] numeros = new int[10];
+
+	        // Recorrer el array y pedir al usuario que ingrese cada número.
+	        for (int i = 0; i < 10; i++) {
+	            System.out.print("Ingrese el número " + (i + 1) + ": ");
+	            try {
+	                numeros[i] = Integer.parseInt(System.getProperty("line.separator")); // Lee la entrada del usuario
+	            } catch (NumberFormatException e) {
+	                System.out.println("Entrada inválida.  Por favor, ingrese un número entero.");
+	                i--; // Decrementar i para que se vuelva a solicitar el mismo elemento
+	            }
+	        }
+
+	        // Imprimir el array para verificar que los números se han guardado correctamente.
+	        System.out.println("El array de números es: " + Arrays.toString(numeros));
+	    }
+
+}

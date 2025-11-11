@@ -1,0 +1,22 @@
+package ejercicio1;
+
+public class Ejercicio1 {
+
+	public static void main(String[] args) 
+	{
+		int[][] matriz=new int[5][5];
+		int suma=0;
+		
+		for(int i=0;i<5;i++)
+		{
+			for(int a=0;a<5;a++)
+			{
+				suma=suma+1;
+				matriz[i][a]=suma;
+				System.out.println(matriz[i][a]);
+				
+			}
+		}
+	}
+
+}

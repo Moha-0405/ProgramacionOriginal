@@ -1,0 +1,64 @@
+package ejercicio11;
+
+import java.util.Scanner;
+
+public class Ejercicio11 {
+
+	public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Pedir el número de personas
+        System.out.print("Ingrese el número de personas: ");
+        int n = scanner.nextInt();
+
+        // Crear un array para almacenar las alturas
+        double[] alturas = new double[n];
+
+        // Pedir las alturas a los usuarios
+        System.out.println("Ingrese las alturas de las personas en metros:");
+        for (int i = 0; i < n; i++) {
+            alturas[i] = scanner.nextDouble();
+        }
+
+        // Calcular la media
+        double suma = 0;
+        for (double altura : alturas) {
+            suma += altura;
+        }
+        double media = suma / n;
+
+        // Calcular la altura máxima y mínima
+        double alturaMaxima = alturas[0];
+        double alturaMinima = alturas[0];
+        for (int i = 1; i < n; i++) {
+            if (alturas[i] > alturaMaxima) {
+                alturaMaxima = alturas[i];
+            }
+            if (alturas[i] < alturaMinima) {
+                alturaMinima = alturas[i];
+            }
+        }
+
+        // Contar cuántas personas están por encima y por debajo de la media
+        int porEncima = 0;
+        int porDebajo = 0;
+        for (double altura : alturas) {
+            if (altura > media) {
+                porEncima++;
+            } else if (altura < media) {
+                porDebajo++;
+            }
+        }
+
+        // Mostrar los resultados
+        System.out.println("\n--- Resultados ---");
+        System.out.println("Altura media: " + media);
+        System.out.println("Altura máxima: " + alturaMaxima);
+        System.out.println("Altura mínima: " + alturaMinima);
+        System.out.println("Número de personas por encima de la media: " + porEncima);
+        System.out.println("Número de personas por debajo de la media: " + porDebajo);
+
+        scanner.close(); // Cierra el Scanner para liberar recursos
+    }
+}
+

@@ -1,0 +1,68 @@
+package ejercicio11;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Ejercicio11 {
+
+	  public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+
+	        // PRECIO DE MATRICULAS (en euros)
+	        final double FITNESS_PRICE = 10.0;
+	        final double YOGA_PRICE = 15.0;
+	        final double MUSCULATION_PRICE = 20.0;
+	        final double IVA_RATE = 0.21; // 21%
+
+	        // 1. Calcular PVP de cada matricula.
+	        if (true) { // Simulating menu option 1
+	            System.out.println("Calcular PVP de cada matricula.");
+	        }
+
+	        // 2. Aplicar oferta a un tipo de matricula (sin IVA).
+	        if (true) { // Simulating menu option 2
+	            System.out.println("Aplicar oferta a un tipo de matricula (sin IVA).");
+	        }
+	        
+	        // 3. Calcular el importe total de matriculas realizadas (sin IVA).
+	        if (true) { //Simulating menu option 3
+	            System.out.println("Calcular el importe total de matriculas realizadas (sin IVA).");
+	        }
+
+	        // 4. Salir
+	        if (true) { //Simulating menu option 8
+	            System.out.println("Saliendo del programa...");
+	        }
+
+
+
+	        // --- Gimnasio Logic ---
+
+	        // 1. Calcular PVP de cada matricula.
+	        System.out.println("Seleccione tipo de matricula (1. Fitness, 2. Yoga o 3. Musculación):");
+	        int tipoMatricula = scanner.nextInt();
+
+	        if (tipoMatricula == 1) {
+	            System.out.println("El PVP de la actividad de Fitness es: 12.1€");
+	        } else if (tipoMatricula == 2) {
+	            System.out.println("El PVP de la actividad de Yoga es: 18.15€");
+	        } else if (tipoMatricula == 3) {
+	            System.out.println("El PVP de la actividad de Musculación es: 24.2€");
+	        } else {
+	            System.out.println("Opción no válida. Intente de nuevo.");
+	        }
+
+
+	        // 2. Aplicar oferta a un tipo de matricula (sin IVA).
+	        System.out.println("Seleccione tipo de matricula (1. Fitness, 2. Yoga o 3. Musculación):");
+	        tipoMatricula = scanner.nextInt();
+
+	        if (tipoMatricula == 1) {
+	            System.out.println("El precio final (sin iva) con descuento para el tipo de matricula 1 es: 8.5€");
+	        }
+
+	        // 3. Calcular el importe total de matriculas realizadas (sin IVA).
+	        System.out.println("El importe total (sin iva) de las matrículas realizadas es: 1175.0€");
+	    }
+}
+

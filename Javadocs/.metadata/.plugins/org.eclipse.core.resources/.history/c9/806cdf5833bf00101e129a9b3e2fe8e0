@@ -1,0 +1,25 @@
+package ejercicio2;
+
+public class Ejercicio2 {
+
+	public static void main(String[] args) 
+	{
+		int[][] matriz=new int[10][10];
+		int num=0;
+		int multi=0;
+		
+		for(int f=0;f<10;f++)
+		{
+			num=num+1;
+			for(int c=0;c<10;c++)
+			{
+				multi=multi+1;
+				matriz[f][c]=num*multi;
+				System.out.print(matriz[f][c]+ "||");
+				System.out.println();
+			}
+			System.out.println("---");
+		}
+	}
+
+}

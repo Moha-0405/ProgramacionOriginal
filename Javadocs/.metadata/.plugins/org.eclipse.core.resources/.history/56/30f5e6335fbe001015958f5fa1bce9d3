@@ -1,0 +1,66 @@
+package ejercicio11;
+
+;
+
+public class Ejercicio11 {
+
+	public static void main(String[] args) {
+
+        // Ejercicio 1: Cálculos Físicos/Matemáticos
+        // Caso 1
+        double x1 = 5;
+        double masa1 = 13;
+        double tiempo1 = 2;
+        double frecuencia1 = 4.8;
+        double radio1 = 1.6;
+
+        double operacion1 = 1.7857142857142858;
+        double fuerzaPeso1 = 127.4000015258789;
+        int numeroVueltas1 = 9;
+        double areaCirculo1 = 8.549587906731501;
+
+        System.out.println("Ejercicio 1 - Caso 1:");
+        System.out.println("OPERACION: " + operacion1);
+        System.out.println("FUERZA_PESO: " + fuerzaPeso1);
+        System.out.println("NUMERO_VUELTAS: " + numeroVueltas1);
+        System.out.println("AREA_CIRCULO: " + areaCirculo1);
+
+
+        // Caso 2
+        double x2 = 10;
+        double masa2 = 2;
+        double tiempo2 = 5;
+        double frecuencia2 = 5.5;
+        double radio2 = 2.8;
+
+        double operacion2 = 12.5;
+        double fuerzaPeso2 = 19.600000381469727;
+        int numeroVueltas2 = 27;
+        double areaCirculo2 = 26.1831100282215;
+
+        System.out.println("\nEjercicio 1 - Caso 2:");
+        System.out.println("OPERACION: " + operacion2);
+        System.out.println("FUERZA_PESO: " + fuerzaPeso2);
+        System.out.println("NUMERO_VUELTAS: " + numeroVueltas2);
+        System.out.println("AREA_CIRCULO: " + areaCirculo2);
+
+        // Caso 3
+        double x3 = 1;
+        double masa3 = 5;
+        double tiempo3 = 10;
+        double frecuencia3 = 3.3;
+        double radio3 = 6.6;
+
+        double operacion3 = 0.22727272727272727;
+        double fuerzaPeso3 = 49.0;
+        int numeroVueltas3 = 33;
+        double areaCirculo3 = 145.4765632750496;
+
+        System.out.println("\nEjercicio 1 - Caso 3:");
+        System.out.println("OPERACION: " + operacion3);
+        System.out.println("FUERZA_PESO: " + fuerzaPeso3);
+        System.out.println("NUMERO_VUELTAS: " + numeroVueltas3);
+        System.out.println("AREA_CIRCULO: " + areaCirculo3);
+    }
+
+}

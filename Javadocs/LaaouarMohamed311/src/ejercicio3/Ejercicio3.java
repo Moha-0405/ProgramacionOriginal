@@ -1,0 +1,61 @@
+package ejercicio3;
+
+import java.util.Scanner;
+
+public class Ejercicio3 {
+
+	public static void main(String[] args) 
+	{
+		Scanner teclado= new Scanner(System.in);
+		
+		System.out.println("Introduce el numero de filas");
+		int fila=teclado.nextInt();
+		
+		System.out.println("introduce el numero de columnas");
+		int columna=teclado.nextInt();
+		
+		int[][] matriz= new int[fila][columna];
+		
+		for(int i=0;i<fila;i++)
+		{
+			for(int a=0;a<columna;a++)
+			{
+				System.out.println("introduzca el numero a guardar");
+				matriz[i][a]=teclado.nextInt();
+				
+			}
+		}
+		
+		int contadorMayor=0;
+		int contadorMenor=0;
+		int contadorIgual=0;
+		for(int i=0;i<fila;i++)
+		{
+			for(int a=0;a<columna;a++)
+			{
+				System.out.print(matriz[i][a]+"|");
+				
+				if(matriz[i][a]>0)
+				{
+					contadorMayor++;
+				}
+				if(matriz[i][a]<0)
+				{
+					contadorMenor++;
+				}
+				if(matriz[i][a]==0)
+				{
+					contadorIgual++;
+				}
+			}
+			System.out.println();
+			
+			
+		}
+		System.out.println("En total hay "+ contadorMayor+" numeros mayores a 0");
+		System.out.println("En total hay "+ contadorMenor+" numeros menores a 0");
+		System.out.println("En total hay "+ contadorIgual+" numeros iguales a 0");
+		
+	}
+
+}
