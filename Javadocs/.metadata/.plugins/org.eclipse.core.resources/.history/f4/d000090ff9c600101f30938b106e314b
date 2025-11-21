@@ -1,0 +1,36 @@
+package ejercicio1;
+
+import java.util.Scanner;
+
+public class Ejercicio1 {
+
+	public static void main(String[] args) 
+	{
+		Scanner teclado= new Scanner(System.in);
+		
+		System.out.println("Escribe la frase que quieras");
+		
+		String frase= teclado.nextLine();
+		char[] caracter = frase.toCharArray() ;
+		char[] palabra= new char[caracter.length];
+		
+		int posicion;
+		int posicionPalabra=0;
+		do
+		{
+			posicion=0;
+
+			do
+			{
+				caracter[posicion]=palabra[posicionPalabra];
+				
+				posicion++;
+			} while (caracter[posicion]!=' ');
+			
+			
+			System.out.println(palabra[posicion]);
+		}while(posicion<caracter.length);
+		
+	}
+
+}

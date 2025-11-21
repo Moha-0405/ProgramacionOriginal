@@ -1,0 +1,24 @@
+package ejercicio1;
+
+import java.util.Scanner;
+
+public class Ejercicio1 {
+
+	public static void main(String[] args) 
+	{
+		Scanner teclado = new Scanner(System.in);
+		
+		System.out.println("Escribe la frase que quieras:");
+		String frase = teclado.nextLine();
+
+		
+		String[] palabras = frase.split(" ");
+
+		
+		for (String palabra : palabras) {
+		    System.out.println(palabra);
+		}
+		
+	}
+
+}
